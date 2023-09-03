@@ -5,4 +5,10 @@ Demos
 仅仅练习的归纳总结
 ## CropView
 
-<img align="left" src="PreView/Preview-crop.gif" width="380">
+<img align="left" src="PreView/Preview-crop.gif" width="280">
+
+------
+
+## DragAndDropList
+
+<img align="left" src="PreView/PreviewDragAndDropList.gif" width="380">
