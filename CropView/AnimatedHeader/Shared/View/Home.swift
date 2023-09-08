@@ -11,7 +11,7 @@ struct Home: View {
     @StateObject var homeData = HomeViewModel()
     @Environment(\.colorScheme) var scheme
     var body: some View {
-        ScrollView { 
+        ScrollView {
             LazyVStack(alignment: .leading, spacing: 15, pinnedViews: [.sectionHeaders] ) {
                 
                 // Parallax header
@@ -31,7 +31,7 @@ struct Home: View {
                         .overlay(
                             HStack {
                                 Button {
-                                
+                                    
                                 } label: {
                                     Image(systemName: "arrow.left")
                                         .font(.system(size: 20, weight: .bold))
@@ -39,59 +39,50 @@ struct Home: View {
                                 }
                                 Spacer()
                                 Button {
-                                
+                                    
                                 } label: {
                                     Image(systemName: "suit.heart.fill")
                                         .font(.system(size: 20, weight: .bold))
                                         .foregroundColor(.white)
-                                }
-                                
-                                
-
+                                } 
                             }
                                 .padding(),
-                                alignment:.top
+                            alignment:.top
                         )
-                        
-)
-                    
+                                   
+                    )
                     
                 }
                 .frame(height: 250)
-                    Section(header: HeaderView()) {
-                        ForEach(tabsItems) {tab  in
-                            VStack(alignment: .leading, spacing: 15) {
-                                Text(tab.tab)
-                                    .font(.title2)
-                                    .fontWeight(.bold)
-                                    .padding(.bottom)
-                                    .padding(.leading)
-                                ForEach(tab.foods){ food in
-                                    CardView(food: food )
-                                }
-                                Divider()
+                Section(header: HeaderView()) {
+                    ForEach(tabsItems) {tab  in
+                        VStack(alignment: .leading, spacing: 15) {
+                            Text(tab.tab)
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .padding(.bottom)
+                                .padding(.leading)
+                            ForEach(tab.foods){ food in
+                                CardView(food: food )
                             }
-                            .tag(tab.tab)
-                            .overlay(
-                                GeometryReader { reader -> Text in
-                                    let offset = reader.frame(in:.global).minY
-                                    let height = UIApplication.shared.windows.first!.safeAreaInsets.top + 100
-                                    if offset < height && offset > 50 && homeData.selectedTab != tab.tab {
-                                        DispatchQueue.main.async{
-                                            self.homeData.selectedTab = tab.tab
-                                        }
-                                    }
-                                    return Text("")
-                                    
-                                }
-                            )
-                            
-                             
+                            Divider()
                         }
-                     
-
+                        .tag(tab.tab)
+                        .overlay(
+                            GeometryReader { reader -> Text in
+                                let offset = reader.frame(in:.global).minY
+                                let height = UIApplication.shared.windows.first!.safeAreaInsets.top + 100
+                                if offset < height && offset > 50 && homeData.selectedTab != tab.tab {
+                                    DispatchQueue.main.async{
+                                        self.homeData.selectedTab = tab.tab
+                                    }
+                                }
+                                return Text("")
+                                
+                            }
+                        )
+                    }
                 }
-                
             }
         }
         .overlay(
@@ -101,7 +92,7 @@ struct Home: View {
                 .ignoresSafeArea(.all,edges: .top)
                 .opacity(homeData.offset > 250 ? 1 : 0)
             ,alignment:.top
-                
+            
         )
         .environmentObject(homeData)
     }

@@ -77,19 +77,13 @@ struct HeaderView: View {
                                     .clipShape(Capsule())
                                     .foregroundColor((homeData.selectedTab == tab.tab ? scheme == .dark ? .black : .white : .primary))
                                     .id(tab.tab)
-                                
-                                
-                                
                             }
                             .onChange(of: homeData.selectedTab) { value in
                                 withAnimation(.easeOut) {
                                     reader.scrollTo(homeData.selectedTab, anchor: .leading)
                                 }
-                                
                             }
                         }
-                        
-                        
                     }
                     .opacity(homeData.offset > 200 ? Double((homeData.offset - 200) / 50) : 0)
                 }
