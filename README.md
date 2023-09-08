@@ -28,7 +28,7 @@ Demos
 
 ## AnimationedHeader
 
-<img align="center" src="PreView/PreviewDragAndDropList.gif" width="380">
+<img align="center" src="PreView/AnimationedHeader.gif" width="380">
 
 <p> 1. Swipe Header to change </p> 
 <p> 2. Swipe tab to switch </p>
