@@ -44,7 +44,7 @@ struct Home: View {
                                     Image(systemName: "suit.heart.fill")
                                         .font(.system(size: 20, weight: .bold))
                                         .foregroundColor(.white)
-                                } 
+                                }
                             }
                                 .padding(),
                             alignment:.top
