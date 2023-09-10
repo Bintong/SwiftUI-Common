@@ -33,10 +33,6 @@ struct HeaderView: View {
                         .fontWeight(.bold)
                     
                 }
-             
-
-               
-           
             }
             
             ZStack {

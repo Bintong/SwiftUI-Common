@@ -21,6 +21,7 @@
 		3A663CF62AAABF35008CCE5C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A663CF52AAABF35008CCE5C /* CardView.swift */; };
 		3A663CF82AAAC521008CCE5C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A663CF72AAAC521008CCE5C /* HeaderView.swift */; };
 		3A663CFA2AAACB04008CCE5C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A663CF92AAACB04008CCE5C /* Tab.swift */; };
+		3A72CCB32AAC77E4005232AA /* TestGem2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A72CCB22AAC77E4005232AA /* TestGem2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		3A663CF52AAABF35008CCE5C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3A663CF72AAAC521008CCE5C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3A663CF92AAACB04008CCE5C /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		3A72CCB22AAC77E4005232AA /* TestGem2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGem2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				3A663CF52AAABF35008CCE5C /* CardView.swift */,
 				3A663CF72AAAC521008CCE5C /* HeaderView.swift */,
 				3A521E2D2AAAEABB00209A26 /* TestGem.swift */,
+				3A72CCB22AAC77E4005232AA /* TestGem2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				3A663CF82AAAC521008CCE5C /* HeaderView.swift in Sources */,
 				3A663CF42AAABC4C008CCE5C /* Foot.swift in Sources */,
 				3A663CF22AA9CDEC008CCE5C /* Home.swift in Sources */,
+				3A72CCB32AAC77E4005232AA /* TestGem2.swift in Sources */,
 				3A663CC42AA9CCF7008CCE5C /* AnimatedHeaderApp.swift in Sources */,
 				3A663CF62AAABF35008CCE5C /* CardView.swift in Sources */,
 				3A663CFA2AAACB04008CCE5C /* Tab.swift in Sources */,

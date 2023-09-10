@@ -12,8 +12,7 @@ struct Home: View {
     @Environment(\.colorScheme) var scheme
     var body: some View {
         ScrollView {
-            LazyVStack(alignment: .leading, spacing: 15, pinnedViews: [.sectionHeaders] ) {
-                
+            LazyVStack(alignment: .leading, spacing: 15, pinnedViews: [.sectionHeaders]) {
                 // Parallax header
                 GeometryReader{ reader -> AnyView in
                     let offset = reader.frame(in: .global).minY

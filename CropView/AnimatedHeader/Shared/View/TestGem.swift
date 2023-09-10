@@ -39,6 +39,8 @@ struct RoundedCorners: View {
     var br: CGFloat = 0.0
     
     var body: some View {
+        
+        // body 的 尺寸和位置
         GeometryReader { geometry in
             Path { path in
                 
