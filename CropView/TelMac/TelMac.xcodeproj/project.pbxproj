@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A3481822AAEB0BF007B2EDA /* TelMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3481812AAEB0BF007B2EDA /* TelMacApp.swift */; };
+		3A3481842AAEB0BF007B2EDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3481832AAEB0BF007B2EDA /* ContentView.swift */; };
+		3A3481862AAEB0C0007B2EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3481852AAEB0C0007B2EDA /* Assets.xcassets */; };
+		3A34818A2AAEB0C0007B2EDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3481892AAEB0C0007B2EDA /* Preview Assets.xcassets */; };
+		3A34819D2AAEB1E8007B2EDA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34819C2AAEB1E8007B2EDA /* HomeViewModel.swift */; };
+		3A3481A02AAEB1F7007B2EDA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34819E2AAEB1F7007B2EDA /* Home.swift */; };
+		3A3481A12AAEB1F7007B2EDA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34819F2AAEB1F7007B2EDA /* TabButton.swift */; };
+		3A3481A32AAEBBB2007B2EDA /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3481A22AAEBBB2007B2EDA /* BlurView.swift */; };
+		3A3481A52AAEDE66007B2EDA /* AllChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3481A42AAEDE66007B2EDA /* AllChatsView.swift */; };
+		3A3481A82AAEE074007B2EDA /* RecentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3481A72AAEE074007B2EDA /* RecentMessage.swift */; };
+		3A3481AA2AAEE078007B2EDA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3481A92AAEE078007B2EDA /* Message.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A34817E2AAEB0BF007B2EDA /* TelMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A3481812AAEB0BF007B2EDA /* TelMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelMacApp.swift; sourceTree = "<group>"; };
+		3A3481832AAEB0BF007B2EDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A3481852AAEB0C0007B2EDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A3481872AAEB0C0007B2EDA /* TelMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TelMac.entitlements; sourceTree = "<group>"; };
+		3A3481892AAEB0C0007B2EDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A34819C2AAEB1E8007B2EDA /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3A34819E2AAEB1F7007B2EDA /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		3A34819F2AAEB1F7007B2EDA /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		3A3481A22AAEBBB2007B2EDA /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		3A3481A42AAEDE66007B2EDA /* AllChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChatsView.swift; sourceTree = "<group>"; };
+		3A3481A72AAEE074007B2EDA /* RecentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMessage.swift; sourceTree = "<group>"; };
+		3A3481A92AAEE078007B2EDA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A34817B2AAEB0BF007B2EDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A3481752AAEB0BF007B2EDA = {
+			isa = PBXGroup;
+			children = (
+				3A3481802AAEB0BF007B2EDA /* TelMac */,
+				3A34817F2AAEB0BF007B2EDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A34817F2AAEB0BF007B2EDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A34817E2AAEB0BF007B2EDA /* TelMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A3481802AAEB0BF007B2EDA /* TelMac */ = {
+			isa = PBXGroup;
+			children = (
+				3A3481A62AAEE05E007B2EDA /* Model */,
+				3A3481992AAEB1A9007B2EDA /* ViewModel */,
+				3A3481982AAEB192007B2EDA /* Home */,
+				3A3481812AAEB0BF007B2EDA /* TelMacApp.swift */,
+				3A3481832AAEB0BF007B2EDA /* ContentView.swift */,
+				3A3481852AAEB0C0007B2EDA /* Assets.xcassets */,
+				3A3481872AAEB0C0007B2EDA /* TelMac.entitlements */,
+				3A3481882AAEB0C0007B2EDA /* Preview Content */,
+			);
+			path = TelMac;
+			sourceTree = "<group>";
+		};
+		3A3481882AAEB0C0007B2EDA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3A3481892AAEB0C0007B2EDA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3A3481982AAEB192007B2EDA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3A34819E2AAEB1F7007B2EDA /* Home.swift */,
+				3A34819F2AAEB1F7007B2EDA /* TabButton.swift */,
+				3A3481A22AAEBBB2007B2EDA /* BlurView.swift */,
+				3A3481A42AAEDE66007B2EDA /* AllChatsView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3A3481992AAEB1A9007B2EDA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3A34819C2AAEB1E8007B2EDA /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3A3481A62AAEE05E007B2EDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A3481A72AAEE074007B2EDA /* RecentMessage.swift */,
+				3A3481A92AAEE078007B2EDA /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A34817D2AAEB0BF007B2EDA /* TelMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A34818D2AAEB0C0007B2EDA /* Build configuration list for PBXNativeTarget "TelMac" */;
+			buildPhases = (
+				3A34817A2AAEB0BF007B2EDA /* Sources */,
+				3A34817B2AAEB0BF007B2EDA /* Frameworks */,
+				3A34817C2AAEB0BF007B2EDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TelMac;
+			productName = TelMac;
+			productReference = 3A34817E2AAEB0BF007B2EDA /* TelMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A3481762AAEB0BF007B2EDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3A34817D2AAEB0BF007B2EDA = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 3A3481792AAEB0BF007B2EDA /* Build configuration list for PBXProject "TelMac" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A3481752AAEB0BF007B2EDA;
+			productRefGroup = 3A34817F2AAEB0BF007B2EDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A34817D2AAEB0BF007B2EDA /* TelMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A34817C2AAEB0BF007B2EDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A34818A2AAEB0C0007B2EDA /* Preview Assets.xcassets in Resources */,
+				3A3481862AAEB0C0007B2EDA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A34817A2AAEB0BF007B2EDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3481A52AAEDE66007B2EDA /* AllChatsView.swift in Sources */,
+				3A3481842AAEB0BF007B2EDA /* ContentView.swift in Sources */,
+				3A34819D2AAEB1E8007B2EDA /* HomeViewModel.swift in Sources */,
+				3A3481AA2AAEE078007B2EDA /* Message.swift in Sources */,
+				3A3481A02AAEB1F7007B2EDA /* Home.swift in Sources */,
+				3A3481A82AAEE074007B2EDA /* RecentMessage.swift in Sources */,
+				3A3481A12AAEB1F7007B2EDA /* TabButton.swift in Sources */,
+				3A3481822AAEB0BF007B2EDA /* TelMacApp.swift in Sources */,
+				3A3481A32AAEBBB2007B2EDA /* BlurView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3A34818B2AAEB0C0007B2EDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A34818C2AAEB0C0007B2EDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3A34818E2AAEB0C0007B2EDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TelMac/TelMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TelMac/Preview Content\"";
+				DEVELOPMENT_TEAM = VH22SWE4K2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.TelMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A34818F2AAEB0C0007B2EDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TelMac/TelMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TelMac/Preview Content\"";
+				DEVELOPMENT_TEAM = VH22SWE4K2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.TelMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A3481792AAEB0BF007B2EDA /* Build configuration list for PBXProject "TelMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A34818B2AAEB0C0007B2EDA /* Debug */,
+				3A34818C2AAEB0C0007B2EDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A34818D2AAEB0C0007B2EDA /* Build configuration list for PBXNativeTarget "TelMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A34818E2AAEB0C0007B2EDA /* Debug */,
+				3A34818F2AAEB0C0007B2EDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A3481762AAEB0BF007B2EDA /* Project object */;
+}
