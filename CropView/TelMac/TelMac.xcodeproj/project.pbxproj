@@ -18,6 +18,7 @@
 		3A3481A52AAEDE66007B2EDA /* AllChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3481A42AAEDE66007B2EDA /* AllChatsView.swift */; };
 		3A3481A82AAEE074007B2EDA /* RecentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3481A72AAEE074007B2EDA /* RecentMessage.swift */; };
 		3A3481AA2AAEE078007B2EDA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3481A92AAEE078007B2EDA /* Message.swift */; };
+		3A6835022AB1C31400419B36 /* RecentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6835012AB1C31400419B36 /* RecentCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3A3481A42AAEDE66007B2EDA /* AllChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChatsView.swift; sourceTree = "<group>"; };
 		3A3481A72AAEE074007B2EDA /* RecentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMessage.swift; sourceTree = "<group>"; };
 		3A3481A92AAEE078007B2EDA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3A6835012AB1C31400419B36 /* RecentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				3A34819F2AAEB1F7007B2EDA /* TabButton.swift */,
 				3A3481A22AAEBBB2007B2EDA /* BlurView.swift */,
 				3A3481A42AAEDE66007B2EDA /* AllChatsView.swift */,
+				3A6835012AB1C31400419B36 /* RecentCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				3A3481A02AAEB1F7007B2EDA /* Home.swift in Sources */,
 				3A3481A82AAEE074007B2EDA /* RecentMessage.swift in Sources */,
 				3A3481A12AAEB1F7007B2EDA /* TabButton.swift in Sources */,
+				3A6835022AB1C31400419B36 /* RecentCardView.swift in Sources */,
 				3A3481822AAEB0BF007B2EDA /* TelMacApp.swift in Sources */,
 				3A3481A32AAEBBB2007B2EDA /* BlurView.swift in Sources */,
 			);

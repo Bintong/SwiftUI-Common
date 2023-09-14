@@ -11,5 +11,11 @@ import Foundation
 class HomeViewModel: ObservableObject {
     
     @Published var selectedTab = "All Chats"
+    @Published var msgs : [RecentMessage] = recentMsgs
     
+    
+    // selected recent tab ..
+    @Published var selectedRecentMsg : String? = recentMsgs.first?.id
+    @Published var searchString = ""
+
 }

@@ -24,7 +24,16 @@ struct RecentMessage : Identifiable  {
 var recentMsgs: [RecentMessage] = [
     
     RecentMessage ( lastMsg: "Apple Tech", lastMsgTime: "15:00", pendingMsgs: "9", userName:
-    "Justine", userImage: "p4", allMsgs: Eachmsg.shuffled()),
-    RecentMessage (lastMsg: "New Album Is Going To Be Released!!!!", lastMsgTime: "14:32", pendingMsgs: "2", userName: "Taylor", userImage: "po", allMsgs: Eachmsg.shuffled ())
+    "Justine", userImage: "7", allMsgs: Eachmsg.shuffled()),
+    RecentMessage (lastMsg: "New Album Is Going To Be Released!!!!", lastMsgTime: "14:32", pendingMsgs: "2", userName: "Taylor", userImage: "13", allMsgs: Eachmsg.shuffled ()),
+    RecentMessage ( lastMsg: "Apple Tech", lastMsgTime: "15:00", pendingMsgs: "9", userName:
+    "Justine", userImage: "11", allMsgs: Eachmsg.shuffled()),
+    RecentMessage (lastMsg: "New Album Is Going To Be Released!!!!", lastMsgTime: "14:32", pendingMsgs: "2", userName: "Taylor", userImage: "19", allMsgs: Eachmsg.shuffled ()),
+    RecentMessage ( lastMsg: "Apple Tech", lastMsgTime: "15:00", pendingMsgs: "9", userName:
+    "Justine", userImage: "13", allMsgs: Eachmsg.shuffled()),
+    RecentMessage (lastMsg: "New Album Is Going To Be Released!!!!", lastMsgTime: "14:32", pendingMsgs: "2", userName: "Taylor", userImage: "99", allMsgs: Eachmsg.shuffled ()),
+    RecentMessage ( lastMsg: "Apple Tech", lastMsgTime: "15:00", pendingMsgs: "9", userName:
+    "Justine", userImage: "20", allMsgs: Eachmsg.shuffled()),
+    RecentMessage (lastMsg: "New Album Is Going To Be Released!!!!", lastMsgTime: "14:32", pendingMsgs: "2", userName: "Taylor", userImage: "102", allMsgs: Eachmsg.shuffled ())
     
 ]
