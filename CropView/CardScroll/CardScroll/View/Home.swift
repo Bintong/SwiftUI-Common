@@ -17,7 +17,7 @@ struct Home: View {
         ScrollView(.vertical) { // main
             VStack(spacing: 0) {
                 VStack (alignment: .leading,spacing: 15) {
-                    Text("Hello iJustins")
+                    Text("Hello Bintong")
                         .font(.largeTitle.bold())
                         .padding(.horizontal, 15)
                         .frame(height: 45)
