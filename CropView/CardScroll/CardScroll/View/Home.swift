@@ -47,11 +47,11 @@ struct Home: View {
                             }
                             .scrollTargetLayout()
                         }
-                        .scrollPosition(id: $activeCard)
+                        .scrollPosition(id: $activeCard) // ios 17
                         .scrollTargetBehavior(.paging) // ios 17
-                        .scrollClipDisabled()
-                        .scrollIndicators(.hidden)
-                        .scrollDisabled(minY != 75)
+                        .scrollClipDisabled() // ios 17
+                        .scrollIndicators(.hidden) // ios 16
+                        .scrollDisabled(minY != 75) // ios 16
                     }
                     .frame(height: 125)
                    
