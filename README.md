@@ -37,5 +37,5 @@ Demos
 
 <img align="center" src="PreView/CardScroll.gif" width="380">
 
-<p> 1. iOS 17 Swift UI scroll view </p> 
- 
+<p> 1. iOS 17 SwiftUI ScrollView </p> 
+<p> 2. Notify scroll index and locations </p>
