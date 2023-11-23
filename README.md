@@ -39,3 +39,12 @@ Demos
 
 <p> 1. iOS 17 SwiftUI ScrollView </p> 
 <p> 2. Notify scroll index and locations </p>
+
+
+## TaskTest
+
+<img align="center" src="PreView/TaskTest.gif" width="380">
+
+<p> 1. Task group </p> 
+<p> 2. Task state </p>
+<p> 3. Actor </p>
