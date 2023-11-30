@@ -25,9 +25,11 @@ class MainActorViewModel:ObservableObject {
             await removeAsync()
         }
     }
-    // not in main
-    nonisolated func buildNet()  async {
-        
+    // 操作数据的时候需要隔离访问
+    // 但是 如果非 操作，仅仅read。不需要隔离访问
+    
+    nonisolated func buildNet() async  {
+        print("nonisolated")
     }
     private func testAction2() async {
         let records = await fetchWeatherHistory() // 需要用的你回掉的时候 才用async

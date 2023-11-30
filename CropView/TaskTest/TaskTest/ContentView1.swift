@@ -70,6 +70,16 @@ struct ContentView1: View {
                     Text("Remove")
                 }
                 
+                Button {
+                    Task {
+                        await mainactorViewModel.buildNet()
+                    }
+                    
+                    
+                } label: {
+                    Text("nonisolated")
+                }
+                
             }
         }
        
