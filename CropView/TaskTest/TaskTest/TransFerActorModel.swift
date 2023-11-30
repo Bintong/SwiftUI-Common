@@ -26,17 +26,29 @@ actor TransFerActorModel:ObservableObject {
         self.unFinishtransferModels.remove(transforModel)
     }
     
-    func pickOneUnRunning() -> TransferModel? {
+    func pickOneUnRunning() async -> TransferModel? {
         guard let m = unFinishtransferModels.filter({$0.transStatus == .pause}).first else { return nil }
         m.transStatus = .running
        return m
     }
  
     
-    func changeToRunning(_ model: TransferModel) {
-        unFinishtransferModels[model].transStatus = .running
+    func duringProgress(_ m: TransferModel)async {
+        
+        
+        try!await Task.sleep(seconds: 0.2)
+        
+        m.progressUpLoad = 1
+        try!await Task.sleep(seconds: 0.2)
+        
+        m.progressUpLoad = 2
+        try!await Task.sleep(seconds: 0.2)
+        
+        m.progressUpLoad = 3
+        try!await Task.sleep(seconds: 0.2)
+        
+        m.progressUpLoad = 4
     }
-    
     
     func changeOnStateFinish(_ model: TransferModel) {
         unFinishtransferModels.remove(model) //先remvoe 

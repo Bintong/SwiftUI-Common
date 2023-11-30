@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 @MainActor
 class MainActorViewModel:ObservableObject {
  
@@ -19,8 +19,10 @@ class MainActorViewModel:ObservableObject {
     var taskTest: Task<Void,Never>?
 
     var actorModel:TransFerActorModel?
-
-    
+    var timeObserve: DispatchSourceTimer! //定时任务
+    init() {
+        
+    }
     
     func loadDb() {
         var models:[TransferModel] = []
@@ -80,10 +82,27 @@ class MainActorViewModel:ObservableObject {
     //MARK: 数据问题
     func donwloadTask() async -> TransferModel? {
         if let model = await self.actorModel?.pickOneUnRunning() {
-            
             unFinishModels = await self.actorModel!.datasUnFinish()
+            
+            try!await Task.sleep(seconds: 0.2)
+            
+            unFinishModels[model].progressUpLoad =  1
+            try!await Task.sleep(seconds: 0.2)
+            unFinishModels = await self.actorModel!.datasUnFinish()
+
+            unFinishModels[model].progressUpLoad = 2
+            try!await Task.sleep(seconds: 0.2)
+            unFinishModels = await self.actorModel!.datasUnFinish()
+
+            unFinishModels[model].progressUpLoad = 3
+            try!await Task.sleep(seconds: 0.2)
+            unFinishModels = await self.actorModel!.datasUnFinish()
+
+            unFinishModels[model].progressUpLoad = 4
+            unFinishModels = await self.actorModel!.datasUnFinish()
+
             finishModels = await self.actorModel!.datasFinished()
-            try!await Task.sleep(seconds:  4)
+            try!await Task.sleep(seconds:  1)
             // sleep 2
 //            print("running task is \(model.fileName)")
             // change state
@@ -109,6 +128,7 @@ class MainActorViewModel:ObservableObject {
             await removeAsync()
         }
     }
+    
     // 操作数据的时候需要隔离访问
     // 但是 如果非 操作，仅仅read。不需要隔离访问
     
@@ -155,4 +175,40 @@ class MainActorViewModel:ObservableObject {
         "OK"
     }
     
+    
+    
+    //
+    
+    
+    //MARK:  GCD定时器倒计时
+        ///
+        /// - Parameters:
+        ///   - timeInterval: 间隔时间
+        ///   - repeatCount: 重复次数
+        ///   - handler: 循环事件,闭包参数: 1.timer 2.剩余执行次数
+        func dispatchTimer(timeInterval: Double, repeatCount: Int, handler: @escaping (DispatchSourceTimer?, Int) -> Void) {
+            
+            if repeatCount <= 0 {
+                return
+            }
+            if timeObserve != nil {
+                timeObserve.cancel()//销毁旧的
+            }
+            // 初始化DispatchSourceTimer前先销毁旧的，否则会存在多个倒计时
+            let timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
+            timeObserve = timer
+            var count = repeatCount
+            timer.schedule(deadline: .now(), repeating: timeInterval)
+            timer.setEventHandler {
+                count -= 1
+                DispatchQueue.main.async {
+                    handler(timer, count)
+                }
+                if count == 0 {
+                    timer.cancel()
+                }
+            }
+            timer.resume()
+            
+        }
 }

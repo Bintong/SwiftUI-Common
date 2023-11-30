@@ -24,6 +24,9 @@ class TransferModel: Hashable, Identifiable,Equatable{
     
     var fileName: String
     var transStatus: TransferStatus
+     
+    var progressUpLoad :Int64 = 0
+    
     let id = UUID()
     init(fileName: String, transStatus: TransferStatus) {
         self.fileName = fileName

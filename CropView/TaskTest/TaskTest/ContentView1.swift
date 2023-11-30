@@ -17,10 +17,6 @@ struct ContentView1: View {
     
     @ObservedObject var actorViewModel:TransFerActorActionViewModel
     @ObservedObject var mainactorViewModel:MainActorViewModel
-
-//    @State var changeTest: Int = 0
-    
-    
     init(actorViewModel: TransFerActorActionViewModel,mainactorViewModel:MainActorViewModel) {
         self.actorViewModel = actorViewModel
         self.mainactorViewModel = mainactorViewModel
@@ -34,7 +30,6 @@ struct ContentView1: View {
                     mainactorViewModel.taskTestFunc()
                 } label: {
                     Text("开始全部")
-                    
                 }
                 Button {
                     mainactorViewModel.isRunning = false
@@ -70,17 +65,12 @@ struct ContentView1: View {
                         await mainactorViewModel.buildNet()
                     }
                     
-                    
                 } label: {
                     Text("nonisolated")
                 }
                 
             }
         }
-       
-        
-        
-        
         
         List {
             Section {
@@ -100,11 +90,7 @@ struct ContentView1: View {
             } header: {
                 Text(" 已经完成 任务 \(self.mainactorViewModel.finishModels.count)")
             }
-            
-          
         }
-            
-        
         .onAppear {
             self.mainactorViewModel.loadDb()
             
@@ -114,12 +100,11 @@ struct ContentView1: View {
     
     
     @ViewBuilder
-
    func taskRow(model:TransferModel) -> some View {
         HStack {
             Text("\(model.fileName)")
             Spacer()
-            Text("\(model.transStatus.description)")
+            Text("\(model.transStatus.description) .... \(model.progressUpLoad)")
         }
     }
     
