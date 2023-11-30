@@ -14,8 +14,8 @@
             filePath = "TaskTest/ContentView1.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "ContentView1"
             landmarkType = "14">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "TaskTest/ContentView1.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "donwloadTask()"
             landmarkType = "7">
          </BreakpointContent>
@@ -97,6 +97,21 @@
                   endingLineNumber = "37"
                   offsetFromSymbolStart = "188">
                </Location>
+               <Location
+                  uuid = "932D5873-9E17-46E2-AB67-58187D62EC01 - f22798708e7474bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskTest.TransFerActorModel.changeOnStateFinish(TaskTest.TransferModel) -&gt; ()"
+                  moduleName = "TaskTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tongbindemac/Desktop/SourceTree/SwiftUIDemos-FromNet/CropView/TaskTest/TaskTest/TransFerActorModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "196">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,40 +125,40 @@
             filePath = "TaskTest/ContentView1.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "taskTestFunc()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0CF5442B-4DCE-43F8-9F87-ED7E1A6C1143 - 874a9833e4ad0971"
+                  uuid = "0CF5442B-4DCE-43F8-9F87-ED7E1A6C1143 - b095975d1d3c293a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(7) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskTest.ContentView1.taskTestFunc() -&gt; ()"
                   moduleName = "TaskTest"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/TaskTest/TaskTest/ContentView1.swift"
+                  urlString = "file:///Users/tongbindemac/Desktop/SourceTree/SwiftUIDemos-FromNet/CropView/TaskTest/TaskTest/ContentView1.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
-                  offsetFromSymbolStart = "300">
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "196">
                </Location>
                <Location
-                  uuid = "0CF5442B-4DCE-43F8-9F87-ED7E1A6C1143 - 874a9833e4ad0971"
+                  uuid = "0CF5442B-4DCE-43F8-9F87-ED7E1A6C1143 - 239321f9bf636d38"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskTest.ContentView1.taskTestFunc() -&gt; ()"
+                  symbolName = "(9) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskTest.ContentView1.taskTestFunc() -&gt; ()"
                   moduleName = "TaskTest"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/TaskTest/TaskTest/ContentView1.swift"
+                  urlString = "file:///Users/tongbindemac/Desktop/SourceTree/SwiftUIDemos-FromNet/CropView/TaskTest/TaskTest/ContentView1.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
-                  offsetFromSymbolStart = "196">
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "80">
                </Location>
             </Locations>
          </BreakpointContent>

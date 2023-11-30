@@ -55,6 +55,8 @@ actor TransFerActorModel:ObservableObject {
         return self.finishedMdoels.count
     }
  
+    
+    
 }
 
 

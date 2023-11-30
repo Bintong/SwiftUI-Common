@@ -11,7 +11,7 @@ import SwiftUI
 struct TaskTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView1()
+            ContentView1(actorViewModel: TransFerActorActionViewModel(),mainactorViewModel: MainActorViewModel())
         }
     }
 }

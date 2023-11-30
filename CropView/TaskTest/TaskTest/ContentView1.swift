@@ -19,24 +19,62 @@ struct ContentView1: View {
     
     @State var isRunning: Bool = false
     @State var actorModel:TransFerActorModel?
+    @ObservedObject var actorViewModel:TransFerActorActionViewModel
+    @ObservedObject var mainactorViewModel:MainActorViewModel
+
     @State var taskTest: Task<Void,Never>?
- 
+//    @State var changeTest: Int = 0
+    
+    
+    init(actorViewModel: TransFerActorActionViewModel,mainactorViewModel:MainActorViewModel) {
+        self.actorViewModel = actorViewModel
+        self.mainactorViewModel = mainactorViewModel
+    }
+    
     var body: some View {
-        HStack{
-            Button {
-                isRunning = true
-                taskTestFunc()
-            } label: {
-                Text("开始全部")
+        VStack {
+            HStack{
+                Button {
+                    isRunning = true
+                    taskTestFunc()
+                } label: {
+                    Text("开始全部")
+                    
+                }
+                Button {
+                    isRunning = false
+                } label: {
+                    Text("暂停全部")
+                }
                 
             }
-            Button {
-                isRunning = false
-            } label: {
-                Text("暂停全部")
-            }
             
+            
+            HStack{
+                Button {
+                    Task {
+                        await actorViewModel.testAction()
+                        actorViewModel.updateNumber(1)
+                    }
+                } label: {
+                    Text("Actor \(actorViewModel.change ) | ")
+                }
+                Button {
+                    mainactorViewModel.main_updateNumber(1)
+                } label: {
+                    Text("MainActor \(mainactorViewModel.change.count)")
+                }
+                Button {
+                    mainactorViewModel.main_remove()
+                } label: {
+                    Text("Remove")
+                }
+                
+            }
         }
+       
+        
+        
         
         
         List {
@@ -70,6 +108,7 @@ struct ContentView1: View {
             }
             self.unFinishModels = models
             self.actorModel = TransFerActorModel(initialTransferModels: models)
+            
         }
     }
     
@@ -224,5 +263,6 @@ extension Task where Success == Never, Failure == Never {
 }
 
 #Preview {
-    ContentView1()
+    
+    ContentView1(actorViewModel: TransFerActorActionViewModel(),mainactorViewModel: MainActorViewModel())
 }
