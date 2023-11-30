@@ -14,8 +14,8 @@
             filePath = "TaskTest/ContentView1.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "ContentView1"
             landmarkType = "14">
          </BreakpointContent>
@@ -30,167 +30,9 @@
             filePath = "TaskTest/TransFerActorModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "datasUnFinish()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5A1BA536-FB4E-4903-AC83-6A182A26EF65"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TaskTest/ContentView1.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
-            landmarkName = "donwloadTask()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "932D5873-9E17-46E2-AB67-58187D62EC01"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TaskTest/TransFerActorModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "changeOnStateFinish(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "932D5873-9E17-46E2-AB67-58187D62EC01 - ecc81453e27672e4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskTest.TransFerActorModel.changeOnStateFinish(TaskTest.TransferModel) -&gt; ()"
-                  moduleName = "TaskTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/TaskTest/TaskTest/TransFerActorModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "100">
-               </Location>
-               <Location
-                  uuid = "932D5873-9E17-46E2-AB67-58187D62EC01 - ecc81453e27672e4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskTest.TransFerActorModel.changeOnStateFinish(TaskTest.TransferModel) -&gt; ()"
-                  moduleName = "TaskTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/TaskTest/TaskTest/TransFerActorModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "188">
-               </Location>
-               <Location
-                  uuid = "932D5873-9E17-46E2-AB67-58187D62EC01 - f22798708e7474bb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskTest.TransFerActorModel.changeOnStateFinish(TaskTest.TransferModel) -&gt; ()"
-                  moduleName = "TaskTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/SourceTree/SwiftUIDemos-FromNet/CropView/TaskTest/TaskTest/TransFerActorModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "196">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0CF5442B-4DCE-43F8-9F87-ED7E1A6C1143"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TaskTest/ContentView1.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "taskTestFunc()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0CF5442B-4DCE-43F8-9F87-ED7E1A6C1143 - 339512d0786679ec"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TaskTest.ContentView1.donwloadTask() async -&gt; Swift.Optional&lt;TaskTest.TransferModel&gt;"
-                  moduleName = "TaskTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/SourceTree/SwiftUIDemos-FromNet/CropView/TaskTest/TaskTest/ContentView1.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "174"
-                  endingLineNumber = "174"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "0CF5442B-4DCE-43F8-9F87-ED7E1A6C1143 - eefd354f32526eb1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for TaskTest.ContentView1.donwloadTask() async -&gt; Swift.Optional&lt;TaskTest.TransferModel&gt;"
-                  moduleName = "TaskTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/SourceTree/SwiftUIDemos-FromNet/CropView/TaskTest/TaskTest/ContentView1.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "174"
-                  endingLineNumber = "174"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "0CF5442B-4DCE-43F8-9F87-ED7E1A6C1143 - 239321f9bf636b47"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(9) suspend resume partial function for closure #1 @Sendable () async -&gt; () in TaskTest.ContentView1.taskTestFunc() -&gt; ()"
-                  moduleName = "TaskTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/SourceTree/SwiftUIDemos-FromNet/CropView/TaskTest/TaskTest/ContentView1.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "174"
-                  endingLineNumber = "174"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CA081F06-5E4C-4B07-AEB8-AE1BE9CC5568"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TaskTest/TransFerActorModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "changeOnStateFinish(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -204,8 +46,8 @@
             filePath = "TaskTest/TransFerActorModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "datasFinishedCount()"
             landmarkType = "7">
          </BreakpointContent>
@@ -220,8 +62,8 @@
             filePath = "TaskTest/TransFerActorModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "datasFinished()"
             landmarkType = "7">
          </BreakpointContent>
@@ -236,8 +78,8 @@
             filePath = "TaskTest/MainActorViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "buildNet()"
             landmarkType = "7">
          </BreakpointContent>

@@ -10,7 +10,91 @@ import Foundation
 @MainActor
 class MainActorViewModel:ObservableObject {
  
-   @Published var change: [Int] = []
+    @Published var change: [Int] = []
+    @Published var isRunning: Bool = false
+
+    @Published var unFinishModels: [TransferModel] = []
+    @Published var finishModels: [TransferModel] = []
+    
+    var taskTest: Task<Void,Never>?
+
+    var actorModel:TransFerActorModel?
+
+    
+    
+    func loadDb() {
+        var models:[TransferModel] = []
+        for i in 0..<10000 {
+            let item = TransferModel(fileName: "第-->\(i)个任务", transStatus: .pause)
+            models.append(item)
+        }
+        self.unFinishModels = models
+        self.actorModel = TransFerActorModel(initialTransferModels: models)
+    }
+    
+    
+    func taskTestFunc() {
+        taskTest = Task(priority: .background) {
+            defer {
+                taskTest = nil
+            }
+            while self.isRunning {
+               
+                let tasks = await withTaskGroup(of: TransferModel?.self, returning: [TransferModel].self) { group in
+                    
+                    group.addTask {
+                        return  await self.donwloadTask()
+                    }
+                    group.addTask {
+                        return  await self.donwloadTask()
+                    }
+                    group.addTask {
+                        return  await self.donwloadTask()
+                    }
+                    
+                    var collected = [TransferModel]()
+                    
+                    for await value in group {
+                        if let v = value {
+                            collected.append(v)
+                        }
+                    }
+                    
+                    
+                    unFinishModels = await self.actorModel!.datasUnFinish()
+                    finishModels = await self.actorModel!.datasFinished()
+                    return collected
+                }
+                
+                if unFinishModels.count == 0 {
+                    break
+                }
+                
+                print("3 finish")
+            }
+            await Task.yield()
+        }
+    }
+    
+    
+    //MARK: 数据问题
+    func donwloadTask() async -> TransferModel? {
+        if let model = await self.actorModel?.pickOneUnRunning() {
+            
+            unFinishModels = await self.actorModel!.datasUnFinish()
+            finishModels = await self.actorModel!.datasFinished()
+            try!await Task.sleep(seconds:  4)
+            // sleep 2
+//            print("running task is \(model.fileName)")
+            // change state
+            await self.actorModel?.changeOnStateFinish(model)
+            return model
+        }
+        return nil
+    }
+    
+    // test
+    
     func main_updateNumber(_ newNum: Int ) {
         self.change.append(1)
         Task {

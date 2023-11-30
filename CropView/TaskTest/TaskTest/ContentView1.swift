@@ -14,15 +14,10 @@ import SwiftUI
 
 
 struct ContentView1: View {
-    @State var unFinishModels: [TransferModel] = []
-    @State var finishModels: [TransferModel] = []
     
-    @State var isRunning: Bool = false
-    @State var actorModel:TransFerActorModel?
     @ObservedObject var actorViewModel:TransFerActorActionViewModel
     @ObservedObject var mainactorViewModel:MainActorViewModel
 
-    @State var taskTest: Task<Void,Never>?
 //    @State var changeTest: Int = 0
     
     
@@ -35,14 +30,14 @@ struct ContentView1: View {
         VStack {
             HStack{
                 Button {
-                    isRunning = true
-                    taskTestFunc()
+                    mainactorViewModel.isRunning = true
+                    mainactorViewModel.taskTestFunc()
                 } label: {
                     Text("开始全部")
                     
                 }
                 Button {
-                    isRunning = false
+                    mainactorViewModel.isRunning = false
                 } label: {
                     Text("暂停全部")
                 }
@@ -89,21 +84,21 @@ struct ContentView1: View {
         
         List {
             Section {
-                ForEach(self.unFinishModels) {model in
+                ForEach(self.mainactorViewModel.unFinishModels) {model in
                     taskRow(model:model)
                         .id(model.id)
 
                 }
             } header: {
-                Text(" 未完成 任务 \(unFinishModels.count)")
+                Text(" 未完成 任务 \(self.mainactorViewModel.unFinishModels.count)")
             }
             Section {
-                ForEach(self.finishModels) {model in
+                ForEach(self.mainactorViewModel.finishModels) {model in
                     taskRow(model:model)
                         .id(model.id)
                 }
             } header: {
-                Text(" 已经完成 任务 \(finishModels.count)")
+                Text(" 已经完成 任务 \(self.mainactorViewModel.finishModels.count)")
             }
             
           
@@ -111,13 +106,7 @@ struct ContentView1: View {
             
         
         .onAppear {
-            var models:[TransferModel] = []
-            for i in 0..<10000 {
-                let item = TransferModel(fileName: "第-->\(i)个任务", transStatus: .pause)
-                models.append(item)
-            }
-            self.unFinishModels = models
-            self.actorModel = TransFerActorModel(initialTransferModels: models)
+            self.mainactorViewModel.loadDb()
             
         }
     }
@@ -129,70 +118,11 @@ struct ContentView1: View {
    func taskRow(model:TransferModel) -> some View {
         HStack {
             Text("\(model.fileName)")
+            Spacer()
             Text("\(model.transStatus.description)")
         }
     }
     
-    func taskTestFunc() {
-        taskTest = Task(priority: .background) {
-            defer {
-                taskTest = nil
-            }
-            while self.isRunning {
-               
-                let tasks = await withTaskGroup(of: TransferModel?.self, returning: [TransferModel].self) { group in
-                    
-                    group.addTask {
-                        return  await self.donwloadTask()
-                    }
-                    group.addTask {
-                        return  await self.donwloadTask()
-                    } 
-                    group.addTask {
-                        return  await self.donwloadTask()
-                    }
-                    
-                    var collected = [TransferModel]()
-                    
-                    for await value in group {
-                        if let v = value {
-                            collected.append(v)
-                        }
-                    }
-                    return collected
-                }
-                
-                if unFinishModels.count == 0 {
-                    break
-                }
-                
-                unFinishModels = await self.actorModel!.datasUnFinish()
-                finishModels = await self.actorModel!.datasFinished()
-                print("3 finish")
-            }
-            await Task.yield()
-        }
-    }
-    
-    func donwloadTask() async -> TransferModel? {
-        
-        // pick one personalFiles[item]
-        if let model = await self.actorModel?.pickOneUnRunning() {
-            model.transStatus = .running
-            try!await Task.sleep(seconds:  4)
-            // sleep 2
-//            print("running task is \(model.fileName)")
-            // change state
-            await self.actorModel?.changeOnStateFinish(model)
-     
-//            await MainActor.run {
-              
-//            }
-             
-            return model
-        }
-        return nil
-    }
     
     
 /*

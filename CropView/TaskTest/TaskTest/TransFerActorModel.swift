@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 actor TransFerActorModel:ObservableObject {
-    
+    // 控制数量
     var taskTest: Task<Void,Never>?  
     var unFinishtransferModels: [TransferModel]
     var finishedMdoels:[TransferModel] = [] // 不知道为啥要如此
@@ -28,10 +28,15 @@ actor TransFerActorModel:ObservableObject {
     
     func pickOneUnRunning() -> TransferModel? {
         guard let m = unFinishtransferModels.filter({$0.transStatus == .pause}).first else { return nil }
-    
+        m.transStatus = .running
        return m
     }
  
+    
+    func changeToRunning(_ model: TransferModel) {
+        unFinishtransferModels[model].transStatus = .running
+    }
+    
     
     func changeOnStateFinish(_ model: TransferModel) {
         unFinishtransferModels.remove(model) //先remvoe 
