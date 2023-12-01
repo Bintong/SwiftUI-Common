@@ -30,8 +30,8 @@
             filePath = "TaskTest/TransFerActorModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "datasUnFinish()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "TaskTest/TransFerActorModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "datasFinishedCount()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,73 +62,10 @@
             filePath = "TaskTest/TransFerActorModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "datasFinished()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9A59F154-5561-485F-A93C-2396B808AC3A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TaskTest/MainActorViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "buildNet()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9A59F154-5561-485F-A93C-2396B808AC3A - 16b49b727bd8a76a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) suspend resume partial function for TaskTest.MainActorViewModel.testAction2() async -&gt; ()"
-                  moduleName = "TaskTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/SourceTree/SwiftUIDemos-FromNet/CropView/TaskTest/TaskTest/MainActorViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "9A59F154-5561-485F-A93C-2396B808AC3A - 8d0d7d2425efd67f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) await resume partial function for TaskTest.MainActorViewModel.testAction2() async -&gt; ()"
-                  moduleName = "TaskTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/SourceTree/SwiftUIDemos-FromNet/CropView/TaskTest/TaskTest/MainActorViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "9A59F154-5561-485F-A93C-2396B808AC3A - abb244549488f90f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for TaskTest.MainActorViewModel.buildNet() async -&gt; ()"
-                  moduleName = "TaskTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tongbindemac/Desktop/SourceTree/SwiftUIDemos-FromNet/CropView/TaskTest/TaskTest/MainActorViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "100">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

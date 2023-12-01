@@ -33,7 +33,7 @@ actor TransFerActorModel:ObservableObject {
     }
  
     
-    func duringProgress(_ m: TransferModel)async {
+    func duringProgress(_ m: TransferModel)async -> TransferModel {
         
         
         try!await Task.sleep(seconds: 0.2)
@@ -48,6 +48,7 @@ actor TransFerActorModel:ObservableObject {
         try!await Task.sleep(seconds: 0.2)
         
         m.progressUpLoad = 4
+        return m
     }
     
     func changeOnStateFinish(_ model: TransferModel) {

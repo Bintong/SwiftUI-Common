@@ -7,17 +7,18 @@
 
 import Foundation
 import SwiftUI
+
 @MainActor
 class MainActorViewModel:ObservableObject {
- 
+    
     @Published var change: [Int] = []
     @Published var isRunning: Bool = false
-
+    
     @Published var unFinishModels: [TransferModel] = []
     @Published var finishModels: [TransferModel] = []
     
     var taskTest: Task<Void,Never>?
-
+    
     var actorModel:TransFerActorModel?
     var timeObserve: DispatchSourceTimer! //定时任务
     init() {
@@ -41,31 +42,23 @@ class MainActorViewModel:ObservableObject {
                 taskTest = nil
             }
             while self.isRunning {
-               
-                let tasks = await withTaskGroup(of: TransferModel?.self, returning: [TransferModel].self) { group in
+                
+                await withTaskGroup(of:Void.self) { group in
                     
                     group.addTask {
-                        return  await self.donwloadTask()
+                        await self.donwloadTask()
                     }
                     group.addTask {
-                        return  await self.donwloadTask()
+                        await self.donwloadTask()
                     }
                     group.addTask {
-                        return  await self.donwloadTask()
-                    }
-                    
-                    var collected = [TransferModel]()
-                    
-                    for await value in group {
-                        if let v = value {
-                            collected.append(v)
-                        }
+                        await self.donwloadTask()
                     }
                     
                     
                     unFinishModels = await self.actorModel!.datasUnFinish()
                     finishModels = await self.actorModel!.datasFinished()
-                    return collected
+                    
                 }
                 
                 if unFinishModels.count == 0 {
@@ -78,38 +71,50 @@ class MainActorViewModel:ObservableObject {
         }
     }
     
-    
-    //MARK: 数据问题
-    func donwloadTask() async -> TransferModel? {
-        if let model = await self.actorModel?.pickOneUnRunning() {
-            unFinishModels = await self.actorModel!.datasUnFinish()
-            
-            try!await Task.sleep(seconds: 0.2)
-            
+    func htcp(_ model: TransferModel)  async   {
+        
+        unFinishModels = await self.actorModel!.datasUnFinish()
+        let unFinishModels = self.unFinishModels
+        try!await Task.sleep(seconds: 0.2)
+        
+        
+        await MainActor.run  {
             unFinishModels[model].progressUpLoad =  1
-            try!await Task.sleep(seconds: 0.2)
-            unFinishModels = await self.actorModel!.datasUnFinish()
-
-            unFinishModels[model].progressUpLoad = 2
-            try!await Task.sleep(seconds: 0.2)
-            unFinishModels = await self.actorModel!.datasUnFinish()
-
-            unFinishModels[model].progressUpLoad = 3
-            try!await Task.sleep(seconds: 0.2)
-            unFinishModels = await self.actorModel!.datasUnFinish()
-
-            unFinishModels[model].progressUpLoad = 4
-            unFinishModels = await self.actorModel!.datasUnFinish()
-
-            finishModels = await self.actorModel!.datasFinished()
-            try!await Task.sleep(seconds:  1)
-            // sleep 2
-//            print("running task is \(model.fileName)")
-            // change state
-            await self.actorModel?.changeOnStateFinish(model)
-            return model
+            self.unFinishModels = unFinishModels
         }
-        return nil
+        
+        
+        try!await Task.sleep(seconds: 0.2)
+        
+        await MainActor.run  {
+            unFinishModels[model].progressUpLoad =  2
+            self.unFinishModels = unFinishModels
+        }
+        try!await Task.sleep(seconds: 0.2)
+        
+        await MainActor.run  {
+            unFinishModels[model].progressUpLoad =  3
+            self.unFinishModels = unFinishModels
+        }
+        try!await Task.sleep(seconds: 0.2)
+        
+        await MainActor.run  {
+            unFinishModels[model].progressUpLoad =  4
+            self.unFinishModels = unFinishModels
+        }
+        await self.actorModel?.changeOnStateFinish(model)
+        
+        
+        finishModels = await self.actorModel!.datasFinished()
+        
+        
+        
+    }
+    //MARK: 数据问题
+    func donwloadTask() async  {
+        if let model = await self.actorModel?.pickOneUnRunning() {
+            await  htcp(model)
+        }
     }
     
     // test
@@ -157,20 +162,20 @@ class MainActorViewModel:ObservableObject {
         let t = await MainActor.run {
             self.change.removeLast()
         }
-         print("remove \(response) ----- \(t)")
+        print("remove \(response) ----- \(t)")
     }
     
     
     func fetchWeatherHistory() async -> [Double] {
         (1...100_000).map { _ in Double.random(in: -10...30) }
     }
-
+    
     func calculateAverageTemperature(for records: [Double]) async -> Double {
         let total = records.reduce(0, +)
         let average = total / Double(records.count)
         return average
     }
-
+    
     func upload(result: Double) async -> String {
         "OK"
     }
@@ -181,34 +186,34 @@ class MainActorViewModel:ObservableObject {
     
     
     //MARK:  GCD定时器倒计时
-        ///
-        /// - Parameters:
-        ///   - timeInterval: 间隔时间
-        ///   - repeatCount: 重复次数
-        ///   - handler: 循环事件,闭包参数: 1.timer 2.剩余执行次数
-        func dispatchTimer(timeInterval: Double, repeatCount: Int, handler: @escaping (DispatchSourceTimer?, Int) -> Void) {
-            
-            if repeatCount <= 0 {
-                return
-            }
-            if timeObserve != nil {
-                timeObserve.cancel()//销毁旧的
-            }
-            // 初始化DispatchSourceTimer前先销毁旧的，否则会存在多个倒计时
-            let timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
-            timeObserve = timer
-            var count = repeatCount
-            timer.schedule(deadline: .now(), repeating: timeInterval)
-            timer.setEventHandler {
-                count -= 1
-                DispatchQueue.main.async {
-                    handler(timer, count)
-                }
-                if count == 0 {
-                    timer.cancel()
-                }
-            }
-            timer.resume()
-            
+    ///
+    /// - Parameters:
+    ///   - timeInterval: 间隔时间
+    ///   - repeatCount: 重复次数
+    ///   - handler: 循环事件,闭包参数: 1.timer 2.剩余执行次数
+    func dispatchTimer(timeInterval: Double, repeatCount: Int, handler: @escaping (DispatchSourceTimer?, Int) -> Void) {
+        
+        if repeatCount <= 0 {
+            return
         }
+        if timeObserve != nil {
+            timeObserve.cancel()//销毁旧的
+        }
+        // 初始化DispatchSourceTimer前先销毁旧的，否则会存在多个倒计时
+        let timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
+        timeObserve = timer
+        var count = repeatCount
+        timer.schedule(deadline: .now(), repeating: timeInterval)
+        timer.setEventHandler {
+            count -= 1
+            DispatchQueue.main.async {
+                handler(timer, count)
+            }
+            if count == 0 {
+                timer.cancel()
+            }
+        }
+        timer.resume()
+        
+    }
 }
